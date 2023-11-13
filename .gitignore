@@ -1,0 +1,35 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# folders
+.idea
+.vscode/*
+!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/tasks.json
+!.vscode/settings.json
+swagger.json
+nbproject
+node_modules
+.npm/
+.config/
+dist/
+logs/
+coverages/
+test/coverages
+test/input
+test/output
+test/temp
+junit.xml
+results/*
+cypress/cucumber-report/
+.cucumber-messages.ndjson
+
+# files
+*.DS_Store
+*._*
+*.log
+*.lock
+*.sqlite
+*.ash_history
+*.env*
+*.tsbuildinfo
