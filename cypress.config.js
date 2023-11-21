@@ -29,7 +29,7 @@ module.exports = defineConfig({
   numTestsKeptInMemory: 1,
   e2e: {
     specPattern: "cypress/e2e/features/*.feature",
-    baseUrl: process.env.BASE_URL ?? "https://www.google.com.br",
+    baseUrl: process.env.BASE_URL ?? "https://practice.automationtesting.in/my-account/",
     supportFile: "cypress/support/e2e.js",
     setupNodeEvents,
   },
