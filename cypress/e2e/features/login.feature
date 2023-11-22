@@ -1,7 +1,11 @@
 # language: pt
 
-Funcionalidade: Login na Página do SwagLabs
+Funcionalidade: Login de usuário
 
-Cenário: CT001: Logar no site do SwagLabs
-Dado de que o usuário está na tela de login
-Quando preenche usuário e senha válidos
+Cenário: CT001: Logando no sistema com um usuário válido
+
+Dado de que o usuário esteja na página de identificação
+Quando preencher o campo "Email" nas credenciais de login
+E preencher o campo senha com uma senha válida
+E clicar no botão "login"
+Então o sistema tem que levar o usuáro até a página inicial

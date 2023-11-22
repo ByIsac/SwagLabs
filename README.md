@@ -1,6 +1,6 @@
-# SwagLabs
+# Testes automatizados
 Repositório para testes automatizados Cypress/cucumber
 
 ---
 
-Teste
+##Testes
