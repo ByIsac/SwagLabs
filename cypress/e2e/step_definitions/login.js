@@ -16,10 +16,17 @@ When ('preencher o campo senha com uma senha válida',() => {
    cy.get('#password').click().type('Senha@123')
 })
 
+When ('preencher o campo senha com uma senha inválida',() => {
+   cy.get('#password').click().type('Senha@1233')
+})
+
 When ('clicar no botão "login"',() => {
    cy.get('p input[value=Login]').click()
 })
 
 Then ('o sistema tem que levar o usuáro até a página inicial', () => {
    cy.get('li a').contains('Logout').should('be.visible')
+})
+Then ('o sistema envia uma mensagem informando que as credenciais estão incorretas', () => {
+   cy.get('.woocommerce-error li, .woocommerce-info li, .woocommerce-message li').should('be.visible')
 })
