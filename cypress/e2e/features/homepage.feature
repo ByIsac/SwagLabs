@@ -1,4 +1,5 @@
 # language: pt
+@test
 
 Funcionalidade: Homepage
 
