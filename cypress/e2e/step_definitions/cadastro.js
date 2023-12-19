@@ -1,9 +1,13 @@
 import { Given, Then, When } from "@badeball/cypress-cucumber-preprocessor";
+import { cadastropage } from "../../pages/cadastro"
+
+// const cadastro = new cadastropage ()
+
 const fakerbr = require('faker-br')
 
 
 When ('preencher o campo "Email"',() => {
-    cy.get('#reg_email').click().type(fakerbr.internet.email())
+   cadastropage.registerEmail()
  })
 
  When ('preencher o campo senha com uma senha',() => {
