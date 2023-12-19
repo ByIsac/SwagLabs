@@ -1,12 +1,8 @@
 import { Given, Then, When } from "@badeball/cypress-cucumber-preprocessor";
-import loginpage from "../../pages/login";
-
-Given('de que o usuário está na tela de login', () => {
-   cy.visit('https://practice.automationtesting.in/my-account/');
-})
+import {loginpage} from "../../pages/login";
 
 Given ('de que o usuário esteja na página de identificação',() => {
-   cy.visit('https://practice.automationtesting.in/my-account/')
+   loginpage.VisitSite()
 })
 
 When ('preencher o campo "Email" nas credenciais de login',() => {
@@ -14,20 +10,20 @@ When ('preencher o campo "Email" nas credenciais de login',() => {
 })
 
 When ('preencher o campo senha com uma senha válida',() => {
-   loginpage.PasswordLogin()
+   loginpage.vPasswordLogin()
 })
 
 When ('preencher o campo senha com uma senha inválida',() => {
-   cy.get('#password').click().type('Senha@1233')
+   loginpage.iPasswordLogin()
 })
 
 When ('clicar no botão "login"',() => {
-   cy.get('p input[value=Login]').click()
+   loginpage.BottonLogin()
 })
 
 Then ('o sistema tem que levar o usuáro até a página inicial', () => {
-   cy.get('li a').contains('Logout').should('be.visible')
+   loginpage.HomepageLogin()
 })
 Then ('o sistema envia uma mensagem informando que as credenciais estão incorretas', () => {
-   cy.get('.woocommerce-error li, .woocommerce-info li, .woocommerce-message li').should('be.visible')
+   loginpage.IncorrectPasswordLogin()
 })
