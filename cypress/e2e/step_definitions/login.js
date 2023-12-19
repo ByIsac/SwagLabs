@@ -1,4 +1,5 @@
 import { Given, Then, When } from "@badeball/cypress-cucumber-preprocessor";
+import loginpage from "../../pages/login";
 
 Given('de que o usuário está na tela de login', () => {
    cy.visit('https://practice.automationtesting.in/my-account/');
@@ -9,11 +10,11 @@ Given ('de que o usuário esteja na página de identificação',() => {
 })
 
 When ('preencher o campo "Email" nas credenciais de login',() => {
-   cy.get('#username').click().type('isac@teste.com')
+  loginpage.EmailLogin()
 })
 
 When ('preencher o campo senha com uma senha válida',() => {
-   cy.get('#password').click().type('Senha@123')
+   loginpage.PasswordLogin()
 })
 
 When ('preencher o campo senha com uma senha inválida',() => {
